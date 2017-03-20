@@ -1,5 +1,20 @@
 public class DVD extends LibraryItem implements Borrowable {
-  private String format;
+  private String name, format;
+  protected Date checkoutDate, dueDate;
+
+  public DVD(String name, String format) {
+    super();
+    this.name = name;
+    this.format = format;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String n) {
+    name = n;
+  }
 
   public String getFormat() {
     return format;
@@ -23,5 +38,9 @@ public class DVD extends LibraryItem implements Borrowable {
 
   public void setDueDate(Date d) {
     dueDate = d;
+  }
+
+  public String toString() {
+    return "DVD: " + name;
   }
 }

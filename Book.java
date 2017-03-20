@@ -1,5 +1,12 @@
 public class Book extends LibraryItem implements Borrowable {
   private String title, publisher;
+  protected Date checkoutDate, dueDate;
+
+  public Book(String title, String publisher) {
+    super();
+    this.title = title;
+    this.publisher = publisher;
+  }
 
   public String getTitle() {
     return title;
@@ -31,5 +38,9 @@ public class Book extends LibraryItem implements Borrowable {
 
   public void setDueDate(Date d) {
     dueDate = d;
+  }
+
+  public String toString() {
+    return "Book: " + title;
   }
 }
